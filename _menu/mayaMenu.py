@@ -1,0 +1,15 @@
+import maya.cmds as cmds
+
+test=cmds.menu(l="politeRigs",p="MayaWindow",to=True)
+cmds.menuItem(divider=True,dividerLabel="modelQuality")
+cmds.radioMenuItemCollection()
+cmds.menuItem(label="low",radioButton=True)
+cmds.menuItem(label="middle",radioButton=False)
+cmds.menuItem(label="high",radioButton=False)
+cmds.setParent("..",menu=True )
+cmds.menuItem(divider=True,dividerLabel="rigTask")
+cmds.radioMenuItemCollection()
+cmds.menuItem(label="base",radioButton=True)
+cmds.menuItem(label="add",radioButton=False)
+cmds.menuItem(label="facial",radioButton=False)
+cmds.menuItem(label="cloth",radioButton=False)
